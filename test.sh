@@ -1,3 +1,3 @@
 #!/bin/sh
 
-Aasem omer
+echo 'Readding tests'
