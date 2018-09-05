@@ -1,4 +1,3 @@
 language: minimal
-sudo: true
 script:
   - ./test.sh
