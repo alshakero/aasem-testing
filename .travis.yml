@@ -1,4 +1,4 @@
 language: java
-scripts:
+script:
     - mvn test
     - echo 'Tests finished Aasem'
