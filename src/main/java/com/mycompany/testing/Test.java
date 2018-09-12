@@ -21,7 +21,7 @@ public class Test {
         int index = 0;
 
         int[] Elements = new int[3];
-        for (int i = args.length - 3; i < args.length; i++) {
+        for (int i = args.length - 2; i < args.length; i++) {
             Elements[index++] = args[i];
         }
         return Elements;
