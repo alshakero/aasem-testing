@@ -97,4 +97,61 @@ public class TestTest {
 
     }
 
+    /**
+     * Test of MaxItem method, of class Test.
+     */
+    @Test
+    public void testMaxItem() {
+        System.out.println("MaxItem");
+        int x[] = {9,58,6,4,25,3};
+        com.mycompany.testing.Test instance = new com.mycompany.testing.Test();
+        int expResult = 58;
+        int result = instance.MaxItem(x);
+        assertEquals(expResult, result);
+       }
+
+    /**
+     * Test of MinItem method, of class Test.
+     */
+    @Test
+    public void testMinItem() {
+        System.out.println("MinItem");
+        int[] Myarray = {9,58,6,4,25,3};
+        com.mycompany.testing.Test instance = new com.mycompany.testing.Test();
+        int expResult = 3;
+        int result = instance.MinItem(Myarray);
+        assertEquals(expResult, result);
+       
+    }
+
+    /**
+     * Test of AvarageItem method, of class Test.
+     */
+    @Test
+    public void testAvarageItem() {
+        System.out.println("AvarageItem");
+        int[] Myarray = {9,58,6,4,25,3};
+        com.mycompany.testing.Test instance = new com.mycompany.testing.Test();
+        double expResult = 17.5;
+        double result = instance.AvarageItem(Myarray);
+        assertEquals(expResult, result, 0.0);
+       
+    }
+
+    /**
+     * Test of ReversString method, of class Test.
+     */
+    @Test
+    public void testReversString() {
+        System.out.println("ReversString");
+        String MyText;
+        MyText = "Aasem";
+        com.mycompany.testing.Test instance = new com.mycompany.testing.Test();
+        String expResult = "mesaA";
+        String result;
+        result = instance.ReversString(MyText);
+        assertEquals(expResult, result);
+       
+    }
+
 }
