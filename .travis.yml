@@ -1,3 +1,4 @@
-language: minimal
+language: java
 script:
-  - ./test.sh
+    - mvn test
+    - echo 'Tests finished Aasem'
