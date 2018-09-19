@@ -5,8 +5,7 @@
  */
 package com.mycompany.testing;
 
-import com.sun.net.httpserver.Authenticator;
-import javax.naming.InsufficientResourcesException;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -74,6 +73,7 @@ public class TestTest {
         int[] args = {6, 9};
         //length =4 
         //length -3= 1
+ 
 
         thrown.expect(IndexOutOfBoundsException.class);
         thrown.expectMessage("Array too short");
@@ -100,42 +100,64 @@ public class TestTest {
     /**
      * Test of MaxItem method, of class Test.
      */
+    @Rule
+    public ExpectedException thrown1 = ExpectedException.none();
+
     @Test
-    public void testMaxItem() {
+    public void testMaxItem() throws IndexOutOfBoundsException {
+
         System.out.println("MaxItem");
-        int x[] = {9,58,6,4,25,3};
+        int x[] = null;
+
+        thrown1.expect(IndexOutOfBoundsException.class);
+        thrown1.expectMessage("Array is empty!");
+
         com.mycompany.testing.Test instance = new com.mycompany.testing.Test();
         int expResult = 58;
         int result = instance.MaxItem(x);
         assertEquals(expResult, result);
-       }
+    }
 
     /**
      * Test of MinItem method, of class Test.
      */
+    @Rule
+    public ExpectedException thrown2 = ExpectedException.none();
+
     @Test
-    public void testMinItem() {
+    public void testMinItem() throws IndexOutOfBoundsException {
         System.out.println("MinItem");
-        int[] Myarray = {9,58,6,4,25,3};
+        int[] Myarray = null;
+
+        thrown2.expect(IndexOutOfBoundsException.class);
+        thrown2.expectMessage("MIN array is empty!");
+
         com.mycompany.testing.Test instance = new com.mycompany.testing.Test();
         int expResult = 3;
         int result = instance.MinItem(Myarray);
         assertEquals(expResult, result);
-       
+
     }
 
     /**
      * Test of AvarageItem method, of class Test.
      */
+    @Rule
+    public ExpectedException thrown3 = ExpectedException.none();
+
     @Test
-    public void testAvarageItem() {
+    public void testAvarageItem() throws IndexOutOfBoundsException {
         System.out.println("AvarageItem");
-        int[] Myarray = {9,58,6,4,25,3};
+        int[] Myarray = null;
+
+        thrown3.expect(IndexOutOfBoundsException.class);
+        thrown3.expectMessage("AVG array is empty!");
+
         com.mycompany.testing.Test instance = new com.mycompany.testing.Test();
         double expResult = 17.5;
         double result = instance.AvarageItem(Myarray);
         assertEquals(expResult, result, 0.0);
-       
+
     }
 
     /**
@@ -151,7 +173,7 @@ public class TestTest {
         String result;
         result = instance.ReversString(MyText);
         assertEquals(expResult, result);
-       
+
     }
 
 }

@@ -1,5 +1,7 @@
 package com.mycompany.testing;
 
+
+
 /**
  *
  * @author Aasem
@@ -29,27 +31,41 @@ public class Test {
     }
 
     public int MaxItem(int[] Myarray) {
-
-        int MaxItem = 0;
+        if (Myarray==null){
+       throw new IndexOutOfBoundsException("Array is empty!");
+        }
+       
+        int MaxItem = Myarray[0];
         for (int i = 0; i < Myarray.length; i++) {
             if (MaxItem < Myarray[i]) {
                 MaxItem = Myarray[i];
-            }
-        }
+            }}
+        
         return MaxItem;
     }
 
     public int MinItem(int[] Myarray) {
-        int MinItem = 999999;
+       if (Myarray==null)
+       {
+           throw new IndexOutOfBoundsException("MIN array is empty!");
+        }
+      
+        int MinItem =Myarray[0];
         for (int i = 0; i < Myarray.length; i++) {
             if (MinItem > Myarray[i]) {
                 MinItem = Myarray[i];
             }
-        }
+      }
         return MinItem;
     }
 
     public double AvarageItem(int[] Myarray) {
+       if (Myarray==null)
+       {
+           throw new IndexOutOfBoundsException("AVG array is empty!");
+       }
+       else{
+        
         double Avg;
         double arrsum = 0;
 
@@ -59,7 +75,7 @@ public class Test {
         }
         Avg = arrsum / Myarray.length;
         return Avg;
-    }
+    }}
 
     public String ReversString(String MyText) {
  
